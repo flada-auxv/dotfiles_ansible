@@ -1,0 +1,39 @@
+- name: Update Homebrew
+  homebrew: update_homebrew=yes upgrade_all=yes
+- name: Tap Homebrew Cask
+  command: brew tap caskroom/cask
+- name: Install formula
+  homebrew: name={{ item }}
+  with_items:
+    - brew-cask
+    - tmux
+    - zsh
+    - zsh-completions
+    - git
+    - hub
+    - wget
+    - openssl
+    - readline
+    - rbenv
+    - ruby-build
+- name: Change default shell
+  command: chsh -s /bin/zsh
+  sudo: yes
+- name: Install App
+  homebrew_cask: name={{ item }}
+  sudo: yes
+  with_items:
+    - kensington-trackball-works
+    - google-chrome
+    - iterm2
+    - moom
+    - karabiner
+    - atom
+    - butter
+    - yorufukurou
+    - virtualbox
+    # - dropbox osx10.10 では cask で上手くインストールできなかった
+    - vagrant
+    - google-japanese-ime
+    - growl-fork
+    - libreoffice
