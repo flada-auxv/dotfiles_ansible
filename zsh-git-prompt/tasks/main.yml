@@ -1,0 +1,7 @@
+- name: Create directory
+  file: path=~/.zsh/git-prompt state=directory
+- name: Get files
+  get_url: url={{ repo_url }}/{{ item }} dest=~/.zsh/git-prompt force=yes
+  with_items:
+    - gitstatus.py
+    - zshrc.sh
