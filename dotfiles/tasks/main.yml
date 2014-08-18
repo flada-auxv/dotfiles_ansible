@@ -1,9 +1,6 @@
-- name: Clone dotfiles
-  git: repo=https://github.com/flada-auxv/dotfiles.git
-       dest=~/.dotfiles
 - name: Create symlink
-  file: src=~/.dotfiles/{{ item }} dest=~/.{{ item }} state=link
-  with_items:
+  file: src={{ item }} dest=~/.{{ item | basename}} state=link
+  with_fileglob:
     - zprofile
     - zshrc
     - zsh_aliases

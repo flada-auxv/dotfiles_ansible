@@ -1,0 +1,83 @@
+[user]
+  name = flada-auxv
+  email = aseknock@gmail.com
+[color]
+  ui = auto
+[alias]
+  a = add
+  aa = add --all
+  amend = commit --amend
+  ap = add -p
+  b = branch
+  ba = branch -a
+  bc = branch --contains
+  bd = branch -d
+  bdel = branch -D
+  br = browse
+  branch-rename = b -m
+  c = commit -v
+  ca = commit -va
+  clear = "!f() { git add . ; git reset --hard HEAD; }; f;"
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+  cot = checkout -t
+  d = diff
+  dc = diff --cached
+  dm = diff origin/master
+  dp = diff HEAD^
+  dpp = diff HEAD^^
+  dppp = diff HEAD^^^
+  dw = diff --word-diff
+  f = fetch
+  g = grep -n
+  l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  lg = log --grep
+  ll = log --graph --date=short --stat
+  lo = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  m = merge
+  pick = add -p
+  pop = reset --soft HEAD^
+  pulla = pull --all
+  pullom = push origin master
+  prune-local-merged = !git branch --merged | grep -v \\* | grep -v master | xargs -I % git branch -d %
+  prune-remote = remote prune origin
+  pushdel = push --delete
+  pushom = push origin master
+  pushup = push --set-upstream
+  rb = rebase
+  rbm = rebase master
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbs = rebase --skip
+  remote = remote -v
+  resoft = reset --soft
+  resoftp = reset --soft HEAD^
+  resoftpp = reset --soft HEAD^^
+  resoftppp = reset --soft HEAD^^^
+  rehard = reset --hard
+  rehardp = reset --hard HEAD^
+  rp = reset -p
+  s = show
+  sp = show HEAD^
+  spp = show HEAD^^
+  sppp = show HEAD^^^
+  ss = show --stat
+  ssp = show HEAD^ --stat
+  sspp = show HEAD^^ --stat
+  ssppp = show HEAD^^^ --stat
+  st = status -sb
+  t = tag
+[core]
+  excludesfile = ~/.gitignore_global
+  quotepath = false
+  autocrlf = input
+[pull]
+  rebase = true
+[push]
+  default = simple
+[merge]
+  ff = false
+[fetch]
+  prune = true
