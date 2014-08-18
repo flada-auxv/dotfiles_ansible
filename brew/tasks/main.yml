@@ -5,17 +5,19 @@
 - name: Install formula
   homebrew: name={{ item }}
   with_items:
+    - autojump
     - brew-cask
-    - tmux
-    - zsh
-    - zsh-completions
     - git
     - hub
-    - wget
     - openssl
-    - readline
     - rbenv
+    - readline
+    - reattach-to-user-namespace
     - ruby-build
+    - tmux
+    - wget
+    - zsh
+    - zsh-completions
 - name: Change default shell
   command: chsh -s /bin/zsh
   sudo: yes
@@ -23,17 +25,17 @@
   homebrew_cask: name={{ item }}
   sudo: yes
   with_items:
-    - kensington-trackball-works
-    - google-chrome
-    - iterm2
-    - moom
-    - karabiner
     - atom
     - butter
-    - yorufukurou
-    - virtualbox
-    # - dropbox osx10.10 では cask で上手くインストールできなかった
-    - vagrant
+    - google-chrome
     - google-japanese-ime
     - growl-fork
+    - iterm2
+    - karabiner
+    - kensington-trackball-works
     - libreoffice
+    - moom
+    - vagrant
+    - virtualbox
+    - yorufukurou
+    # - dropbox osx10.10 では cask で上手くインストールできなかった
