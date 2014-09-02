@@ -1,6 +1,7 @@
 # ログインシェルとして起動された場合のみ読み込まれる
 
 export LANG=ja_JP.UTF-8
+export EDITOR=/usr/local/bin/vim
 export BUNDLER_EDITOR=atom
 
 # HomeBrewコマンドのインストール先("/usr/local/bin or sbin")を優先する
