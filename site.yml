@@ -2,7 +2,7 @@
   connection: local
   gather_facts: false
   roles:
-    - dotfiles
-    - brew
-    - zsh-git-prompt
-    # - dropbox
+    - { role: dotfiles, tags: "dotfiles" }
+    - { role: brew, tags: "brew" }
+    - { role: zsh-git-prompt, tags: "zsh-git-prompt" }
+    - { role: dropbox, tags: "dropbox" }
