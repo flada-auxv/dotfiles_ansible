@@ -23,7 +23,6 @@
   sudo: yes
 - name: Install App
   homebrew_cask: name={{ item }}
-  sudo: yes
   with_items:
     - atom
     - butter
