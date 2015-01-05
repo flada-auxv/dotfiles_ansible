@@ -26,6 +26,10 @@ setopt correct # コマンドのスペルチェック
 setopt no_beep # ビープ音を鳴らない様にする
 setopt prompt_subst # prompt文字列を毎回評価する
 
+# 先方予測
+# autoload predict-on
+# predict-on
+
 autoload -U colors; colors
 # 一般ユーザ時
 tmp_prompt="%{${fg[cyan]}%}%n%{${reset_color}%}"
@@ -79,3 +83,7 @@ eval "$(hub alias -s)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export ORACLE_HOME=/Users/flada/opt/oracle
+export PATH=${ORACLE_HOME}/bin:$PATH
+export DYLD_LIBRARY_PATH=${ORACLE_HOME}/lib

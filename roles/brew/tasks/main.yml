@@ -9,12 +9,14 @@
     - brew-cask
     - git
     - hub
+    - imagemagick
     - openssl
     - rbenv
     - readline
     - reattach-to-user-namespace
     - ruby-build
     - tmux
+    - tree
     - wget
     - zsh
     - zsh-completions

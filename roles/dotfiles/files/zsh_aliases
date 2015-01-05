@@ -34,3 +34,5 @@ function tmux-copy() {
   return 0
 }
 alias tcopy=tmux-copy
+
+alias j=autojump

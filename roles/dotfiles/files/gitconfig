@@ -81,3 +81,7 @@
   ff = false
 [fetch]
   prune = true
+[credential]
+	helper = osxkeychain
+[credential "https://github.com"]
+        username = flada-auxv
