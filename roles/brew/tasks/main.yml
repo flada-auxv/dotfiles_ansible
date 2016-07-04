@@ -5,12 +5,13 @@
 - name: Install formula
   homebrew: name={{ item }}
   with_items:
-    - autojump
     - brew-cask
+    - ghq
     - git
     - hub
     - imagemagick
     - openssl
+    - peco
     - rbenv
     - readline
     - reattach-to-user-namespace
@@ -27,16 +28,6 @@
   homebrew_cask: name={{ item }}
   with_items:
     - atom
-    - butter
     - google-chrome
     - google-japanese-ime
-    - growl-fork
     - iterm2
-    - karabiner
-    - kensington-trackball-works
-    - libreoffice
-    - moom
-    - vagrant
-    - virtualbox
-    - yorufukurou
-    # - dropbox osx10.10 では cask で上手くインストールできなかった
