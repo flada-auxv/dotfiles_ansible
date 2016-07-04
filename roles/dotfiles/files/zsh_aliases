@@ -15,11 +15,13 @@ alias g="git"
 alias gi="git"
 alias gt="git"
 alias gti="git"
-alias go="git browse"
+alias gb="git browse"
 alias clone="git clone"
 alias fetch="git fetch"
 alias pull="git pull"
 alias push="git push"
+
+alias a="atom"
 
 alias v="vi"
 alias vu="vi"
@@ -28,11 +30,5 @@ alias vo="vi"
 alias r="rails"
 alias rr="rake routes"
 
-# tmuxとクリップボードの同期
-function tmux-copy() {
-  tmux save-buffer - | reattach-to-user-namespace pbcopy
-  return 0
-}
-alias tcopy=tmux-copy
-
-alias j=autojump
+p() { peco | while read LINE; do $@ $LINE; done }
+alias j='ghq list -p | p cd'
