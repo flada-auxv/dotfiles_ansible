@@ -15,8 +15,8 @@
   bdel = branch -D
   br = browse
   branch-rename = b -m
-  c = commit -v
-  ca = commit -va
+  c = commit
+  ca = commit -a
   clear = "!f() { git add . ; git reset --hard HEAD; }; f;"
   co = checkout
   cob = checkout -b
@@ -85,3 +85,5 @@
 	helper = osxkeychain
 [credential "https://github.com"]
         username = flada-auxv
+[commit]
+	verbose = true
