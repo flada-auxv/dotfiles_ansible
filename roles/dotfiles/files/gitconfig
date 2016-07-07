@@ -87,3 +87,5 @@
         username = flada-auxv
 [commit]
 	verbose = true
+[diff]
+	compactionHeuristic = true
