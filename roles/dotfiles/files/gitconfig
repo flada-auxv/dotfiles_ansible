@@ -82,10 +82,10 @@
 [fetch]
   prune = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [credential "https://github.com"]
-        username = flada-auxv
+  username = flada-auxv
 [commit]
-	verbose = true
+  verbose = true
 [diff]
-	compactionHeuristic = true
+  compactionHeuristic = true
