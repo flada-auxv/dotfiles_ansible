@@ -1,11 +1,8 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
-- name: Tap Homebrew Cask
-  command: brew tap caskroom/cask
 - name: Install formula
   homebrew: name={{ item }}
   with_items:
-    - brew-cask
     - ghq
     - git
     - hub
@@ -27,7 +24,5 @@
 - name: Install App
   homebrew_cask: name={{ item }}
   with_items:
-    - atom
     - google-chrome
     - google-japanese-ime
-    - iterm2
