@@ -4,4 +4,3 @@
     - { role: dotfiles, tags: "dotfiles" }
     - { role: brew, tags: "brew" }
     - { role: zsh-git-prompt, tags: "zsh-git-prompt" }
-    - { role: dropbox, tags: "dropbox" }

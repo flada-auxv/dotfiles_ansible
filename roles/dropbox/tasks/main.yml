@@ -1,2 +1,0 @@
-- name: Create symlink settings for Atom
-  command: ln -sf ~/Dropbox/.atom ~/.atom

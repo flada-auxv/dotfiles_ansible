@@ -1,28 +1,28 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
 - name: Install formula
-  homebrew: name={{ item }}
-  with_items:
-    - ghq
-    - git
-    - hub
-    - imagemagick
-    - openssl
-    - peco
-    - rbenv
-    - readline
-    - reattach-to-user-namespace
-    - ruby-build
-    - tmux
-    - tree
-    - wget
-    - zsh
-    - zsh-completions
+  homebrew:
+    name:
+      - ghq
+      - git
+      - hub
+      - imagemagick
+      - openssl
+      - peco
+      - rbenv
+      - readline
+      - reattach-to-user-namespace
+      - ruby-build
+      - tmux
+      - tree
+      - wget
+      - zsh
+      - zsh-completions
 - name: Change default shell
   command: chsh -s /bin/zsh
-  sudo: yes
+  become: yes
 - name: Install App
-  homebrew_cask: name={{ item }}
-  with_items:
-    - google-chrome
-    - google-japanese-ime
+  homebrew_cask:
+    name:
+      - google-chrome
+  ignore_errors: result.msg.startswith('Error: It seems there is already an App at')
