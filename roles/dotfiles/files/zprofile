@@ -1,24 +1,5 @@
-# ログインシェルとして起動された場合のみ読み込まれる
-
 export LANG=ja_JP.UTF-8
-export EDITOR=/usr/bin/vim
-export BUNDLER_EDITOR=atom
 
-# HomeBrewコマンドのインストール先("/usr/local/bin or sbin")を優先する
-# ついでにホームディレクトリのbinも追加
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
-
-### Heroku Toolbelt
-if which heroku > /dev/null 2>&1; then
-  export PATH=/usr/local/heroku/bin:$PATH
-fi
-
-### PpostrgreSQL
-if which postgres > /dev/null 2>&1; then
-  export PGDATA=/usr/local/var/postgres
-fi
-
-# PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
 ### tmux自動起動
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmux >/dev/null 2>&1; then
@@ -29,5 +10,3 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         fi
     fi
 fi
-
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --with-readline-dir=`brew --prefix readline`"

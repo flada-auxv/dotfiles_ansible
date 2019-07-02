@@ -89,3 +89,5 @@
   verbose = true
 [diff]
   compactionHeuristic = true
+[ghq]
+  root = ~/go/src

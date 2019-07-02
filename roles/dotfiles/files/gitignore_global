@@ -25,6 +25,9 @@ Session.vim
 .netrwhist
 *~
 
+# VS Code
+.vscode/
+
 # Ruby
 *.gem
 *.rbc
@@ -71,3 +74,5 @@ pickle-email-*.html
 .tags_sorted_by_file
 .gemtags
 dump.rdb
+
+target

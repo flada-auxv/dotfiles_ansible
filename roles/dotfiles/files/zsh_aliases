@@ -32,3 +32,5 @@ alias rr="rake routes"
 
 p() { peco | while read LINE; do $@ $LINE; done }
 alias j='ghq list -p | p cd'
+
+alias dc="docker-compose"
